@@ -9,41 +9,32 @@ class ClienteTest {
     @Test
     void deveElogiarRestaurante() {
         Cliente cliente = new ClienteComum();
-        Setor restaurante = Restaurante.getInstancia();
-        assertEquals("A Central de Serviços agradece seu contato.\n" +
-                        "O setor respondeu seu elogio conforme mensagem a seguir.\n" +
-                        ">>O Restaurante agradece o elogio: Excelente comida!",
-                cliente.elogiar("Excelente comida!", restaurante));
+        assertEquals("A Recepção agradece seu elogio para o restaurante!\n" +
+                        "Mensagem: O Restaurante agradece o elogio: Ótimo atendimento",
+                cliente.elogiarRestaurante("Ótimo atendimento"));
     }
 
     @Test
     void deveReclamarRestaurante() {
         Cliente cliente = new ClienteComum();
-        Setor restaurante = Restaurante.getInstancia();
-        assertEquals("A Central de Serviços agradece seu contato.\n" +
-                        "O setor respondeu sua reclamação conforme mensagem a seguir.\n" +
-                        ">>O Restaurante vai procurar melhorar o serviço da reclamação: Atendimento lento",
-                cliente.reclamar("Atendimento lento", restaurante));
+        assertEquals("A Recepção vai procurar resolver a seguinte reclamação sobre o restaurante:\n" +
+                        "Mensagem: O Restaurante vai procurar melhorar o serviço da reclamação: Lentidão no atendimento",
+                cliente.reclamarRestaurante("Lentidão no atendimento"));
     }
 
     @Test
-    void deveElogiarRecepcionista() {
+    void deveElogiarLimpeza() {
         Cliente cliente = new ClienteComum();
-        Setor recepcionista = Recepcionista.getInstancia();
-        assertEquals("A Central de Serviços agradece seu contato.\n" +
-                        "O setor respondeu seu elogio conforme mensagem a seguir.\n" +
-                        ">>A Recepção agradece o elogio: Muito simpática!",
-                cliente.elogiar("Muito simpática!", recepcionista));
+        assertEquals("A Recepção agradece seu elogio para a limpeza!\n" +
+                        "Mensagem: A Limpeza agradece o elogio: Excelente limpeza",
+                cliente.elogiarLimpeza("Excelente limpeza"));
     }
 
     @Test
-    void deveReclamarRecepcionista() {
+    void deveReclamarLimpeza() {
         Cliente cliente = new ClienteComum();
-        Setor recepcionista = Recepcionista.getInstancia();
-        assertEquals("A Central de Serviços agradece seu contato.\n" +
-                        "O setor respondeu sua reclamação conforme mensagem a seguir.\n" +
-                        ">>A Recepção vai procurar resolver a reclamação: Falta de cordialidade",
-                cliente.reclamar("Falta de cordialidade", recepcionista));
+        assertEquals("A Recepção vai procurar resolver a seguinte reclamação sobre a limpeza:\n" +
+                        "Mensagem: A Limpeza vai procurar melhorar o serviço da reclamação: Sujeira nos banheiros",
+                cliente.reclamarLimpeza("Sujeira nos banheiros"));
     }
-
 }

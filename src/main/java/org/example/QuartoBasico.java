@@ -1,6 +1,6 @@
 package org.example;
 
-public class QuartoBasico implements Quarto, Cloneable {
+public class QuartoBasico implements Quarto{
 
     @Override
     public String getDescricao() {

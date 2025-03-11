@@ -1,6 +1,6 @@
 package org.example;
 
-public class Recepcionista implements Setor {
+public class Recepcionista {
 
     private static Recepcionista instancia = new Recepcionista();
 
@@ -10,13 +10,24 @@ public class Recepcionista implements Setor {
         return instancia;
     }
 
-    @Override
-    public String receberReclamacao(String mensagem) {
-        return "A Recepção vai procurar resolver a reclamação: " + mensagem;
+    public String receberElogioRestaurante(String mensagem) {
+        return "A Recepção agradece seu elogio para o restaurante!\n" +
+                "Mensagem: " + Restaurante.getInstancia().receberElogio(mensagem);
     }
 
-    @Override
-    public String receberElogio(String mensagem) {
-        return "A Recepção agradece o elogio: " + mensagem;
+    public String receberReclamacaoRestaurante(String mensagem) {
+        return "A Recepção vai procurar resolver a seguinte reclamação sobre o restaurante:\n" +
+                "Mensagem: " + Restaurante.getInstancia().receberReclamacao(mensagem);
     }
+
+    public String receberElogioLimpeza(String mensagem) {
+        return "A Recepção agradece seu elogio para a limpeza!\n" +
+                "Mensagem: " + Limpeza.getInstancia().receberElogio(mensagem);
+    }
+
+    public String receberReclamacaoLimpeza(String mensagem) {
+        return "A Recepção vai procurar resolver a seguinte reclamação sobre a limpeza:\n" +
+                "Mensagem: " + Limpeza.getInstancia().receberReclamacao(mensagem);
+    }
+
 }

@@ -15,11 +15,4 @@ public class QuartoComTV extends QuartoDecorator {
         return quarto.getCusto() + 20.0;
     }
 
-    public Quarto clone() {
-        try {
-            return (Quarto) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Erro ao clonar quarto", e);
-        }
-    }
 }

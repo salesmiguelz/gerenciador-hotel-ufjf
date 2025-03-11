@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Observable;
 
 
-public class Reserva extends Observable implements RelatorioClienteReserva, Cloneable {
+public class Reserva extends Observable implements RelatorioClienteReserva{
     private ReservaEstado estado;
     private Date data;
     private Quarto quarto;
@@ -77,7 +77,4 @@ public class Reserva extends Observable implements RelatorioClienteReserva, Clon
         return visitor.exibirReserva(this);
     }
 
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
 }

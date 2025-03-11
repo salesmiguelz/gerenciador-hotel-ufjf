@@ -16,11 +16,4 @@ public class QuartoComFrigobar extends QuartoDecorator {
         return quarto.getCusto() + 30.0; // Custo adicional por ter frigobar
     }
 
-    public Quarto clone() {
-        try {
-            return (Quarto) super.clone();
-        } catch (CloneNotSupportedException e) {
-            throw new RuntimeException("Erro ao clonar quarto", e);
-        }
-    }
 }

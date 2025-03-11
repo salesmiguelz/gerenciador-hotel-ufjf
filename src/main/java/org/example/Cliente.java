@@ -40,12 +40,20 @@ public abstract class Cliente implements Observer, RelatorioClienteReserva, Clon
     }
 
 
-    public String reclamar(String mensagem, Setor setor) {
-        return CentralDeServicos.getInstancia().enviarReclamacao(mensagem, setor);
+    public String elogiarRestaurante(String mensagem) {
+        return Recepcionista.getInstancia().receberElogioRestaurante(mensagem);
     }
 
-    public String elogiar(String mensagem, Setor setor) {
-        return CentralDeServicos.getInstancia().enviarElogio(mensagem, setor);
+    public String reclamarRestaurante(String mensagem) {
+        return Recepcionista.getInstancia().receberReclamacaoRestaurante(mensagem);
+    }
+
+    public String elogiarLimpeza(String mensagem) {
+        return Recepcionista.getInstancia().receberElogioLimpeza(mensagem);
+    }
+
+    public String reclamarLimpeza(String mensagem) {
+        return Recepcionista.getInstancia().receberReclamacaoLimpeza(mensagem);
     }
 
     public String aceitar(Visitor visitor) {

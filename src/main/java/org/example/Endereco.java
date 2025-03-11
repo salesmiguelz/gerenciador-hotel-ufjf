@@ -61,12 +61,6 @@ public class Endereco implements Cloneable{
         this.cep = cep;
     }
 
-    // Método toString para exibir o endereço de forma legível
-    @Override
-    public String toString() {
-        return "Endereço: " + rua + ", nº " + numero + ", " + cidade + " - " + estado + " - " + "CEP: " + cep;
-    }
-
     public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
