@@ -7,5 +7,8 @@ Os padrões escolhidos foram: Template Method, Decorator, Observer, State, Media
 
 **Todos os testes estão na pasta Test.**
 
-# Diagrama simplificado
-![Template Method ](src/imgs/visitor-diagram.png)
+# Diagrama de classes
+![Diagrama de classes ](src/imgs/diagrama-final-hotel.png)
+
+# Diagrama de estados
+![Diagrama de estados ](src/imgs/diagrama-estados.png)
