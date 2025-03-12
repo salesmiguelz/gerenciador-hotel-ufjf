@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-public abstract class Cliente implements Observer, RelatorioClienteReserva, Cloneable {
+public abstract class Cliente implements Observer, Cloneable {
     private List<Reserva> reservas = new ArrayList<>();
     private String nome;
     private Endereco endereco;
@@ -54,10 +54,6 @@ public abstract class Cliente implements Observer, RelatorioClienteReserva, Clon
 
     public String reclamarLimpeza(String mensagem) {
         return Recepcionista.getInstancia().receberReclamacaoLimpeza(mensagem);
-    }
-
-    public String aceitar(Visitor visitor) {
-        return visitor.exibirCliente(this);
     }
 
     public void observarReserva(Reserva reserva) {

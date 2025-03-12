@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Observable;
 
 
-public class Reserva extends Observable implements RelatorioClienteReserva{
+public class Reserva extends Observable{
     private ReservaEstado estado;
     private Date data;
     private Quarto quarto;
@@ -71,10 +71,4 @@ public class Reserva extends Observable implements RelatorioClienteReserva{
         notifyObservers();
         return novoEstado;
     }
-
-    @Override
-    public String aceitar(Visitor visitor) {
-        return visitor.exibirReserva(this);
-    }
-
 }

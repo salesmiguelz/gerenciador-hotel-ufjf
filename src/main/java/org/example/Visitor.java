@@ -1,6 +1,6 @@
 package org.example;
 
 public interface Visitor {
-    String exibirCliente(Cliente cliente);
-    String exibirReserva(Reserva reserva);
+    String exibirCliente(RelatorioCliente relatorio);
+    String exibirReserva(RelatorioReserva relatorio);
 }
