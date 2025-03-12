@@ -8,7 +8,8 @@ Os padrões escolhidos foram: Template Method, Decorator, Observer, State, Media
 **Todos os testes estão na pasta Test.**
 
 # Diagrama de classes
-Clique na imagem para poder visualizá-la em maior resolução
+**Clique na imagem para poder visualizá-la em maior resolução**
+
 ![Diagrama de classes ](src/imgs/diagrama-final-hotel.png)
 
 # Diagrama de estados
